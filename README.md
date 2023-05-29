@@ -1,5 +1,7 @@
 # profile-server
 
+create a postgresql database in name : report
+
 # npm i 
 to install dependencies
 
