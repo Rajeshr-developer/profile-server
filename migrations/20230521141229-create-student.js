@@ -18,44 +18,47 @@ module.exports = {
       nationality: {
         type: Sequelize.STRING,
       },
+      religion: {
+        type: Sequelize.STRING,
+      },
       community: {
         type: Sequelize.STRING,
       },
       dob: {
         type: Sequelize.DATE,
       },
-      gender: {
+      admission: {
         type: Sequelize.STRING,
       },
-      admission: {
+      dateofadmission: {
         type: Sequelize.DATE,
       },
-      class: {
+      semester: {
         type: Sequelize.STRING,
       },
       qualified: {
         type: Sequelize.STRING,
       },
-      majorSubject: {
+      feespaid: {
         type: Sequelize.STRING,
       },
-      firstLanguage: {
-        type: Sequelize.STRING,
-      },
-      instructionMedium: {
+      scholarship: {
         type: Sequelize.STRING,
       },
       dateLeft: {
         type: Sequelize.DATE,
       },
-      reason: {
+      dateOfTcApplied: {
+        type: Sequelize.DATE,
+      },
+      extraCirricular: {
         type: Sequelize.STRING,
       },
       conductCharacter: {
         type: Sequelize.STRING,
       },
       profilePic: {
-        type: Sequelize.BLOB("tiny"),
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,

@@ -1,12 +1,12 @@
 {
   "name": "sample",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://github.com/Rajeshr-developer/profile-server",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "npx sequelize-cli db:migrate && nodemon index.js"
   },
   "author": "",
   "license": "ISC",
