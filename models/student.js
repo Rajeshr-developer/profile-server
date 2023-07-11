@@ -14,6 +14,7 @@ Student.init(
     },
     name: DataTypes.STRING,
     parent: DataTypes.STRING,
+    department: DataTypes.STRING,
     nationality: DataTypes.STRING,
     religion: DataTypes.STRING,
     community: DataTypes.STRING,

@@ -15,6 +15,9 @@ module.exports = {
       parent: {
         type: Sequelize.STRING,
       },
+      department: {
+        type: Sequelize.STRING,
+      },
       nationality: {
         type: Sequelize.STRING,
       },

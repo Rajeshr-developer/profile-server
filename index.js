@@ -25,7 +25,6 @@ app.post("/login", async (req, res) => {
       req.body.password,
       user.password
     );
-    console.log("password_valid = ", password_valid);
     if (password_valid) {
       res.send({ status: true });
       return;
@@ -59,10 +58,12 @@ app.get("/search", function (req, res) {
 });
 
 app.post("/uploadcsv", function (req, res) {
+  console.log(req.body[0]?.department);
   student
     .destroy({
-      where: {},
-      truncate: true,
+      where: {
+        department: req.body[0]?.department,
+      },
     })
     .then(() => {
       student.bulkCreate([...req.body], { returning: true }).then(() => {
@@ -73,6 +74,23 @@ app.post("/uploadcsv", function (req, res) {
 
 app.get("/login", function (req, res) {
   res.send("login");
+});
+
+app.get("/getDepartmentData", function (req, res) {
+  console.log("..req = ", req.query);
+  student
+    .findAll({
+      where: {
+        department: { [Op.eq]: req.query.name },
+      },
+      attributes: {
+        exclude: ["department"],
+      },
+    })
+    .then((data) => {
+      res.status(200).json(data);
+    })
+    .catch((err) => {});
 });
 
 app.listen(PORT, () => {
